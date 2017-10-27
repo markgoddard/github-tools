@@ -20,9 +20,9 @@ def main():
         pulls = repo.get_pulls()
         pulls = [pull for pull in pulls]
         if pulls:
-            print colored(repo.full_name, 'red')
+            print colored(repo.full_name, 'green')
             for pull in pulls:
-                print colored(pull.title, 'green')
+                print '  ' + colored(pull.title, 'red') + ' ' + colored('[' + pull.user.login + ']', 'yellow')
 
 
 if __name__ == "__main__":
